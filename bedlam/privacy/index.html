@@ -46,7 +46,7 @@
   <nav class="lang" aria-label="언어"><a href="#ko">한국어</a><a href="#en">English</a></nav>
 
   <section id="ko" lang="ko">
-    <p class="meta">시행일 2026년 10월 15일</p>
+    <p class="meta">시행일 2026년 10월 19일</p>
 
     <p>Madang Works(이하 "개발자")는 안드로이드 게임 「Bedlam」(이하 "앱")을 제공하면서 이용자의 정보를 어떻게
       다루는지 아래와 같이 알립니다.</p>
@@ -56,6 +56,7 @@
       <ul>
         <li>회원가입과 로그인이 없습니다. 개발자는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.</li>
         <li>기록과 설정은 이 기기 안에만 저장됩니다. 앱은 개발자의 서버와 통신하지 않습니다.</li>
+        <li>[같이 하기]는 같은 와이파이의 기기끼리 직접 연결하며, 개인정보는 주고받지 않습니다(5항).</li>
         <li>광고를 보여주기 위해 Google AdMob 이 광고 ID 같은 기기 정보를 수집합니다(3항). 유럽경제지역(EEA)·영국·스위스에서는
           먼저 동의를 묻습니다.</li>
       </ul>
@@ -67,7 +68,8 @@
       <tr><td>기록</td><td>한 판 수, 이긴 판 수, 준 피해량, 열린 깃발 장식</td><td>기록 화면에 보여 주고 조건을 채운 깃발 장식을 엽니다</td></tr>
       <tr><td>설정</td><td>화면 흔들림·쏜 탄 따라가기를 켰는지, 효과음 크기, 상대 실력, 고른 팀(색·무늬)과 깃발 장식</td><td>고른 설정을 다음에도 씁니다</td></tr>
     </table></div>
-    <p>이 정보는 기기 밖으로 나가지 않으며 개발자는 볼 수 없습니다. 판 중간의 상태는 저장하지 않습니다. 앱을 삭제하거나
+    <p>이 정보는 개발자에게 가지 않으며 개발자는 볼 수 없습니다. [같이 하기]를 쓸 때만 고른 팀과 깃발 장식이 같은 방의
+      기기로 갑니다(5항). 판 중간의 상태는 저장하지 않습니다. 앱을 삭제하거나
       [설정 › 앱 › Bedlam › 저장공간 › 데이터 삭제]를 하면 바로 지워집니다.</p>
 
     <h2>2. 개발자가 직접 수집하는 정보</h2>
@@ -111,30 +113,42 @@
     <p>국외 이전을 원하지 않으면 앱을 쓰지 않거나 위의 광고 설정에서 광고 ID 를 삭제할 수 있습니다.
       광고가 나오지 않는 상태에서도 게임은 그대로 할 수 있습니다.</p>
 
-    <h2>5. 앱 권한</h2>
-    <p>앱은 위치·카메라·마이크·연락처·사진 같은 권한을 요청하지 않습니다. 광고를 받기 위한 인터넷 권한, 광고 ID
+    <h2>5. 같이 하기 (같은 와이파이)</h2>
+    <p>메인 메뉴의 [같이 하기]를 쓰면 같은 와이파이(로컬 네트워크)에 있는 기기끼리 직접 연결해 한 판을 합니다.
+      인터넷 너머의 사람과는 연결하지 않고, 개발자의 서버를 거치지 않습니다.</p>
+    <ul>
+      <li><strong>방 알림</strong> — 방을 만들면 같은 와이파이에 방 번호(무작위 네 자리), 지금 인원, 고른 방, 앱 버전을 알립니다.</li>
+      <li><strong>같은 방 기기끼리 주고받는 것</strong> — 고른 팀(색·무늬)과 깃발 장식, 조작(이동·조준·발사), 경기 상태(포와 소품의 자리, 피해, 순위)</li>
+    </ul>
+    <p>이름·계정·연락처 같은 개인정보는 보내지 않으며, 같은 방 사람은 서로를 팀 색으로만 봅니다. 연결에는 기기의
+      로컬 네트워크 주소(IP)가 쓰이고 연결이 끝나면 버립니다. 주고받은 정보는 저장하지 않습니다(판이 끝난 뒤 남는 것은
+      1항의 내 기록뿐입니다).</p>
+
+    <h2>6. 앱 권한</h2>
+    <p>앱은 위치·카메라·마이크·연락처·사진 같은 권한을 요청하지 않습니다. 광고를 받고 [같이 하기]에서 같은 와이파이의
+      기기와 연결하기 위한 인터넷 권한, 광고 ID
       권한(<code>AD_ID</code>), 그리고 광고 SDK 가 쓰는 시스템 권한(네트워크 상태 확인, 통신망 종류 같은 기본 기기 상태,
       화면 꺼짐 방지, 백그라운드 작업)만 있으며, 모두 설치할 때 자동으로 허용되는 권한입니다.</p>
 
-    <h2>6. 아동</h2>
+    <h2>7. 아동</h2>
     <p>앱은 13세 미만 아동을 대상으로 하지 않으며, 개발자는 아동의 개인정보를 알고서 수집하지 않습니다.</p>
 
-    <h2>7. 이용자의 권리</h2>
+    <h2>8. 이용자의 권리</h2>
     <p>개발자가 보관하는 개인정보가 없으므로 열람·정정·삭제를 요청할 대상이 없습니다. 기기에 저장된 정보는
       1항의 방법으로 직접 지울 수 있고, 광고 정보는 3항의 설정과 Google 의 도구로 관리할 수 있습니다.
       궁금한 점은 아래 연락처로 문의해 주세요.</p>
 
-    <h2>8. 개인정보 보호책임자 · 문의</h2>
+    <h2>9. 개인정보 보호책임자 · 문의</h2>
     <p>Madang Works — 이메일 <a href="mailto:pan889@naver.com">pan889@naver.com</a></p>
 
-    <h2>9. 변경</h2>
+    <h2>10. 변경</h2>
     <p>이 방침이 바뀌면 시행일과 함께 이 페이지에 알립니다. 앱이 수집하는 정보가 달라지는 변경은 시행 7일 전에
       알립니다.</p>
   </section>
 
   <section id="en" lang="en">
     <h1>Bedlam Privacy Policy</h1>
-    <p class="meta">Effective October 15, 2026 · Madang Works</p>
+    <p class="meta">Effective October 19, 2026 · Madang Works</p>
 
     <p>This policy explains how Madang Works ("we") handles information in the Android game Bedlam ("the app").</p>
 
@@ -143,6 +157,7 @@
       <ul>
         <li>There is no sign-up or login. We do not collect your name, email address, phone number or any other personal information.</li>
         <li>Your records and settings are stored only on your device. The app does not communicate with our servers.</li>
+        <li>Play Together connects devices on the same Wi-Fi directly and exchanges no personal information (section 5).</li>
         <li>To show ads, Google AdMob collects device information such as the advertising ID (section 3). In the EEA, the UK
           and Switzerland, the app asks for your consent first.</li>
       </ul>
@@ -154,7 +169,8 @@
       <tr><td>Records</td><td>Matches played, matches won, damage dealt and unlocked flag decorations</td><td>Shown on the records screen and used to unlock flag decorations</td></tr>
       <tr><td>Settings</td><td>Whether screen shake and shell follow camera are on, sound effect volume, opponent skill, chosen team (color and pattern) and flag decoration</td><td>So your choices are kept next time</td></tr>
     </table></div>
-    <p>This information never leaves your device and we cannot see it. The state in the middle of a match is not saved.
+    <p>This information is never sent to us and we cannot see it. Only when you use Play Together are your chosen team
+      and flag decoration sent to the other devices in the same room (section 5). The state in the middle of a match is not saved.
       Uninstalling the app, or [Settings › Apps › Bedlam › Storage › Clear data], deletes it immediately.</p>
 
     <h2>2. Information we collect</h2>
@@ -200,24 +216,36 @@
     <p>If you do not want this transfer, you can stop using the app or delete your advertising ID as described above.
       The game remains fully playable when no ads are shown.</p>
 
-    <h2>5. App permissions</h2>
+    <h2>5. Play Together (same Wi-Fi)</h2>
+    <p>With [같이 하기] (Play Together) in the main menu, devices on the same Wi-Fi (local network) connect directly to play
+      a match together. The app does not connect to people beyond your local network and does not go through our servers.</p>
+    <ul>
+      <li><strong>Room announcements</strong> — when you open a room, the app announces on the same Wi-Fi a room number (four random digits), the current number of players, the chosen room and the app version.</li>
+      <li><strong>Exchanged between devices in the same room</strong> — chosen team (color and pattern) and flag decoration, controls (moving, aiming, firing) and match state (positions of cannons and props, damage, ranking)</li>
+    </ul>
+    <p>No personal information such as names, accounts or contacts is sent; players in a room see each other only as team
+      colors. The devices' local network addresses (IP) are used for the connection and discarded when it ends. Nothing
+      exchanged is stored (after a match, only your own records in section 1 remain).</p>
+
+    <h2>6. App permissions</h2>
     <p>The app does not request location, camera, microphone, contacts, photos or similar permissions. It only has
-      internet access to receive ads, the advertising ID permission (<code>AD_ID</code>) and system permissions used by the
+      internet access to receive ads and to connect with devices on the same Wi-Fi for Play Together, the advertising ID
+      permission (<code>AD_ID</code>) and system permissions used by the
       ads SDK (network state, basic device state such as the network type, keeping the device awake, background work), all
       of which are granted automatically at install.</p>
 
-    <h2>6. Children</h2>
+    <h2>7. Children</h2>
     <p>The app is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
 
-    <h2>7. Your rights</h2>
+    <h2>8. Your rights</h2>
     <p>Because we hold no personal information about you, there is nothing for us to access, correct or delete. You
       can delete the on-device information as described in section 1 and manage ad data with the settings in section 3
       and Google's tools. Please contact us with any questions.</p>
 
-    <h2>8. Contact</h2>
+    <h2>9. Contact</h2>
     <p>Madang Works — email <a href="mailto:pan889@naver.com">pan889@naver.com</a></p>
 
-    <h2>9. Changes</h2>
+    <h2>10. Changes</h2>
     <p>If this policy changes, we will post the new version on this page with its effective date. Changes to the
       information the app collects will be announced 7 days before they take effect.</p>
   </section>
