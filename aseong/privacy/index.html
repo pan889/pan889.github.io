@@ -46,7 +46,7 @@
   <nav class="lang" aria-label="언어"><a href="#ko">한국어</a><a href="#en">English</a></nav>
 
   <section id="ko" lang="ko">
-    <p class="meta">시행일 2026년 10월 6일</p>
+    <p class="meta">시행일 2026년 10월 19일</p>
 
     <p>Madang Works(이하 "개발자")는 안드로이드 게임 「아성」(이하 "앱")을 제공하면서 이용자의 정보를 어떻게
       다루는지 아래와 같이 알립니다.</p>
@@ -56,6 +56,7 @@
       <ul>
         <li>회원가입과 로그인이 없습니다. 개발자는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.</li>
         <li>게임 기록과 골드는 이 기기 안에만 저장됩니다. 앱은 개발자의 서버와 통신하지 않습니다.</li>
+        <li>[둘이서 하기]는 같은 와이파이의 기기끼리 직접 연결하며, 개인정보는 주고받지 않습니다(5항).</li>
         <li>광고를 보여주기 위해 Google AdMob 이 광고 ID 같은 기기 정보를 수집합니다(3항). 유럽경제지역(EEA)·영국·스위스에서는
           먼저 동의를 묻습니다.</li>
       </ul>
@@ -66,8 +67,10 @@
       <tr><th>항목</th><th>내용</th><th>목적</th></tr>
       <tr><td>최고 기록</td><td>도달한 가장 높은 스테이지와 그 판에서 부순 적의 수</td><td>메인 화면에 최고 기록을 보여 줍니다</td></tr>
       <tr><td>보유 골드</td><td>게임에서 모은 골드의 양</td><td>출격 준비 화면에서 강화를 사는 데 씁니다</td></tr>
+      <tr><td>둘이서 최고 기록</td><td>[둘이서 하기]로 도달한 가장 높은 스테이지와 그 판에서 부순 적의 수</td><td>둘이서 한 판의 결과 화면에 보여 줍니다</td></tr>
     </table></div>
-    <p>이 정보는 기기 밖으로 나가지 않으며 개발자는 볼 수 없습니다. 앱을 삭제하거나
+    <p>이 정보는 개발자에게 가지 않으며 개발자는 볼 수 없습니다. [둘이서 하기]에서 손님으로 들어가면 출격할 때 보유 골드와
+      출격 준비에서 산 것이 방장 기기로 가서 그 판에 쓰입니다(5항). 앱을 삭제하거나
       [설정 › 앱 › 아성 › 저장공간 › 데이터 삭제]를 하면 바로 지워집니다.</p>
 
     <h2>2. 개발자가 직접 수집하는 정보</h2>
@@ -111,30 +114,45 @@
     <p>국외 이전을 원하지 않으면 앱을 쓰지 않거나 위의 광고 설정에서 광고 ID 를 삭제할 수 있습니다.
       광고가 나오지 않는 상태에서도 게임은 그대로 할 수 있습니다.</p>
 
-    <h2>5. 앱 권한</h2>
-    <p>앱은 위치·카메라·마이크·연락처·사진 같은 권한을 요청하지 않습니다. 광고를 받기 위한 인터넷 권한,
+    <h2>5. 둘이서 하기 (같은 와이파이)</h2>
+    <p>메인 화면의 [둘이서 하기]를 쓰면 같은 와이파이(로컬 네트워크)에 있는 기기 두 대가 직접 연결해 한 판을 함께 합니다.
+      인터넷 너머의 사람과는 연결하지 않고, 개발자의 서버를 거치지 않습니다. 한 기기(방장)가 판을 돌리고 다른 기기(손님)는
+      받은 화면을 그립니다.</p>
+    <ul>
+      <li><strong>방 알림</strong> — 방을 만들면 같은 와이파이에 방 이름(ASEONG-과 무작위 네 자리)과 연결할 포트를 알립니다.</li>
+      <li><strong>두 기기가 주고받는 것</strong> — 손님이 출격 준비에서 고른 것(생명·보유 골드·기동·화력·섬광탄·보호막),
+        조작(이동·발사·섬광탄), 판의 상태(전차·포탄·지형·남은 적·생명·골드), 일시정지와 앱을 잠시 내렸는지 여부,
+        연결 확인 신호</li>
+    </ul>
+    <p>이름·계정·연락처 같은 개인정보는 보내지 않습니다. 연결에는 기기의 로컬 네트워크 주소(IP)가 쓰이고, 방이 자동으로
+      보이지 않을 때 손님이 직접 넣을 수 있도록 방장 화면에 보입니다. 주소는 연결이 끝나면 버리고, 주고받은 정보는 저장하지
+      않습니다(판이 끝난 뒤 남는 것은 1항의 내 기록과 골드뿐입니다).</p>
+
+    <h2>6. 앱 권한</h2>
+    <p>앱은 위치·카메라·마이크·연락처·사진 같은 권한을 요청하지 않습니다. 광고를 받고 [둘이서 하기]에서 같은 와이파이의
+      기기와 연결하기 위한 인터넷 권한,
       광고 ID 권한(<code>AD_ID</code>), 그리고 광고 SDK 가 쓰는 시스템 권한(네트워크 상태 확인, Android 광고
       개인 정보 보호 API 등)만 있으며, 모두 설치할 때 자동으로 허용되는 권한입니다.</p>
 
-    <h2>6. 아동</h2>
+    <h2>7. 아동</h2>
     <p>앱은 13세 미만 아동을 대상으로 하지 않으며, 개발자는 아동의 개인정보를 알고서 수집하지 않습니다.</p>
 
-    <h2>7. 이용자의 권리</h2>
+    <h2>8. 이용자의 권리</h2>
     <p>개발자가 보관하는 개인정보가 없으므로 열람·정정·삭제를 요청할 대상이 없습니다. 기기에 저장된 정보는
       1항의 방법으로 직접 지울 수 있고, 광고 정보는 3항의 설정과 Google 의 도구로 관리할 수 있습니다.
       궁금한 점은 아래 연락처로 문의해 주세요.</p>
 
-    <h2>8. 개인정보 보호책임자 · 문의</h2>
+    <h2>9. 개인정보 보호책임자 · 문의</h2>
     <p>Madang Works — 이메일 <a href="mailto:pan889@naver.com">pan889@naver.com</a></p>
 
-    <h2>9. 변경</h2>
+    <h2>10. 변경</h2>
     <p>이 방침이 바뀌면 시행일과 함께 이 페이지에 알립니다. 앱이 수집하는 정보가 달라지는 변경은 시행 7일 전에
       알립니다.</p>
   </section>
 
   <section id="en" lang="en">
     <h1>Aseong Privacy Policy</h1>
-    <p class="meta">Effective October 6, 2026 · Madang Works</p>
+    <p class="meta">Effective October 19, 2026 · Madang Works</p>
 
     <p>This policy explains how Madang Works ("we") handles information in the Android game Aseong ("the app").</p>
 
@@ -143,6 +161,7 @@
       <ul>
         <li>There is no sign-up or login. We do not collect your name, email address, phone number or any other personal information.</li>
         <li>Your game records and gold are stored only on your device. The app does not communicate with our servers.</li>
+        <li>Play Together connects two devices on the same Wi-Fi directly and exchanges no personal information (section 5).</li>
         <li>To show ads, Google AdMob collects device information such as the advertising ID (section 3). In the EEA, the UK
           and Switzerland, the app asks for your consent first.</li>
       </ul>
@@ -153,8 +172,11 @@
       <tr><th>Item</th><th>Contents</th><th>Purpose</th></tr>
       <tr><td>Best record</td><td>The highest stage you reached and the enemies you destroyed in that run</td><td>Shown on the main screen</td></tr>
       <tr><td>Gold</td><td>The amount of gold you have saved up in the game</td><td>Spent on upgrades on the sortie preparation screen</td></tr>
+      <tr><td>Co-op best record</td><td>The highest stage reached with [둘이서 하기] (Play Together) and the enemies destroyed in that run</td><td>Shown on the results screen of a two-player game</td></tr>
     </table></div>
-    <p>This information never leaves your device and we cannot see it. Uninstalling the app, or
+    <p>This information is never sent to us and we cannot see it. When you join a room as the guest in Play Together,
+      your gold and what you bought for the sortie are sent to the host's device to be used in that game (section 5).
+      Uninstalling the app, or
       [Settings › Apps › Aseong › Storage › Clear data], deletes it immediately.</p>
 
     <h2>2. Information we collect</h2>
@@ -199,23 +221,38 @@
     <p>If you do not want this transfer, you can stop using the app or delete your advertising ID as described above.
       The game remains fully playable when no ads are shown.</p>
 
-    <h2>5. App permissions</h2>
+    <h2>5. Play Together (same Wi-Fi)</h2>
+    <p>With [둘이서 하기] (Play Together) on the main screen, two devices on the same Wi-Fi (local network) connect directly
+      to play a game together. The app does not connect to people beyond your local network and does not go through our
+      servers. One device (the host) runs the game and the other (the guest) draws what it receives.</p>
+    <ul>
+      <li><strong>Room announcement</strong> — when you open a room, the app announces on the same Wi-Fi a room name (ASEONG- and four random digits) and the port to connect to.</li>
+      <li><strong>Exchanged between the two devices</strong> — what the guest chose for the sortie (lives, gold, mobility,
+        firepower, flares, shield), controls (moving, firing, flares), game state (tanks, shells, terrain, enemies left,
+        lives, gold), whether the game is paused or the app is briefly in the background, and a connection check signal</li>
+    </ul>
+    <p>No personal information such as names, accounts or contacts is sent. The devices' local network addresses (IP) are
+      used for the connection, and the host's address is shown on its screen so the guest can enter it if the room does not
+      appear automatically. Addresses are discarded when the connection ends, and nothing exchanged is stored (after a game,
+      only your own records and gold in section 1 remain).</p>
+
+    <h2>6. App permissions</h2>
     <p>The app does not request location, camera, microphone, contacts, photos or similar permissions. It only has
-      internet access to receive ads, the advertising ID permission (<code>AD_ID</code>) and system permissions used by
+      internet access to receive ads and to connect with a device on the same Wi-Fi for Play Together, the advertising ID permission (<code>AD_ID</code>) and system permissions used by
       the ads SDK (network state, Android ad privacy APIs), all of which are granted automatically at install.</p>
 
-    <h2>6. Children</h2>
+    <h2>7. Children</h2>
     <p>The app is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
 
-    <h2>7. Your rights</h2>
+    <h2>8. Your rights</h2>
     <p>Because we hold no personal information about you, there is nothing for us to access, correct or delete. You
       can delete the on-device information as described in section 1 and manage ad data with the settings in section 3
       and Google's tools. Please contact us with any questions.</p>
 
-    <h2>8. Contact</h2>
+    <h2>9. Contact</h2>
     <p>Madang Works — email <a href="mailto:pan889@naver.com">pan889@naver.com</a></p>
 
-    <h2>9. Changes</h2>
+    <h2>10. Changes</h2>
     <p>If this policy changes, we will post the new version on this page with its effective date. Changes to the
       information the app collects will be announced 7 days before they take effect.</p>
   </section>
